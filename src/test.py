@@ -6,10 +6,10 @@ def input(
 ):
     host = 'http://localhost:8080'
     obj = {
-        'string': (None, string)
+        'string': string
     }
 
-    x = requests.post(host, files = obj)
+    x = requests.post(host, data = obj)
     print(x.text)
     print('\n\n')
 
