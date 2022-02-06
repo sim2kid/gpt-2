@@ -4,7 +4,7 @@ import fire
 def input(
     string='I love me some data'
 ):
-    host = 'http://localhost:8080'
+    host = 'http://localhost:80'
     obj = {
         'string': string
     }

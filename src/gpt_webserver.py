@@ -11,9 +11,6 @@ import fire
 
 import model, sample, encoder
 
-hostName = "localhost"
-serverPort = 8080
-
 def interact_model(
     result,
     pretext,
@@ -108,7 +105,7 @@ def interact_model(
 
 class Server(BaseHTTPRequestHandler):
     def do_GET(self):
-        self.send_response(405)
+        self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
@@ -166,7 +163,7 @@ class Server(BaseHTTPRequestHandler):
 
 def startServer (
     host='localhost',
-    port=8080
+    port=80
 ): 
     webServer = HTTPServer((host, port), Server)
     print("Server started http://%s:%s" % (host, port))
